@@ -1,6 +1,6 @@
-import { Item, ItemCategory } from "./Item.model";
+import { IItem, ItemCategory } from "./IItem";
 
-export class Book implements Item {
+export class Book implements IItem {
 
     private orderId: number;
     private bookTitle: string;
@@ -11,8 +11,7 @@ export class Book implements Item {
     private publisher: string;
     private specialEdition: string;
     private packaging: string;
-    private price: number;
-    private quantity: number;
+   
 
     constructor(
         orderId: number,
@@ -24,8 +23,7 @@ export class Book implements Item {
         publisher: string,
         specialEdition: string,
         packaging: string,
-        price: number,
-        quantity: number
+        
     ) {
         this.orderId = orderId;
         this.bookTitle = bookTitle;
@@ -36,8 +34,7 @@ export class Book implements Item {
         this.publisher = publisher;
         this.specialEdition = specialEdition;
         this.packaging = packaging;
-        this.price = price;
-        this.quantity = quantity;
+      
     }
 
     getOrderId(): number {
@@ -76,13 +73,9 @@ export class Book implements Item {
         return this.packaging;
     }
 
-    getPrice(): number {
-        return this.price;
-    }
+   
 
-    getQuantity(): number {
-        return this.quantity;
-    }
+  
     getCategory(): ItemCategory{
         return ItemCategory.BOOK;
     }

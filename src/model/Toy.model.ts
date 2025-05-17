@@ -1,4 +1,4 @@
-import { Item, ItemCategory } from "./Item.model";
+import { IItem, ItemCategory } from "./IItem";
 
 
 export class Toy {
@@ -9,8 +9,7 @@ export class Toy {
     private Material: string;
     private BatteryRequired: boolean;
     private Educational: boolean;
-    private Price: number;
-    private Quantity: number;
+
 
     constructor(
         OrderID: number,
@@ -20,8 +19,7 @@ export class Toy {
         Material: string,
         BatteryRequired: boolean,
         Educational: boolean,
-        Price: number,
-        Quantity: number
+      
     ) {
         this.OrderID = OrderID;
         this.Type = Type;
@@ -30,8 +28,7 @@ export class Toy {
         this.Material = Material;
         this.BatteryRequired = BatteryRequired;
         this.Educational = Educational;
-        this.Price = Price;
-        this.Quantity = Quantity;
+     
     }
 
     public getOrderID(): number {
@@ -62,13 +59,7 @@ export class Toy {
         return this.Educational;
     }
 
-    public getPrice(): number {
-        return this.Price;
-    }
 
-    public getQuantity(): number {
-        return this.Quantity;
-    }
 
     getCategory(): ItemCategory{
         return ItemCategory.TOY;

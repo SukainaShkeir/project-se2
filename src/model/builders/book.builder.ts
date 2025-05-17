@@ -11,9 +11,7 @@ export class BookBuilder {
     private publisher!: string;
     private specialEdition!: string;
     private packaging!: string;
-    private price!: number;
-    private quantity!: number;
-
+   
     public setOrderId(orderId: number): BookBuilder {
         this.orderId = orderId;
         return this;
@@ -59,15 +57,7 @@ export class BookBuilder {
         return this;
     }
 
-    public setPrice(price: number): BookBuilder {
-        this.price = price;
-        return this;
-    }
-
-    public setQuantity(quantity: number): BookBuilder {
-        this.quantity = quantity;
-        return this;
-    }
+    
     build(): Book {
         const requiredProperties = [
             this.orderId,
@@ -79,8 +69,7 @@ export class BookBuilder {
             this.publisher,
             this.specialEdition,
             this.packaging,
-            this.price,
-            this.quantity
+           
         ];
 
         for (const property of requiredProperties) {
@@ -101,8 +90,6 @@ export class BookBuilder {
             this.publisher,
             this.specialEdition,
             this.packaging,
-            this.price,
-            this.quantity
         );
     }
 

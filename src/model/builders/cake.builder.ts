@@ -17,6 +17,10 @@ export class CakeBuilder {
     private specialIngredients!: string;
     private packagingType!: string;
 
+    public static NewBuilder(): CakeBuilder {
+        return new CakeBuilder();
+    }
+
 
     setType(type: string): CakeBuilder {
         this.type = type;
@@ -99,11 +103,11 @@ export class CakeBuilder {
             this.frostingFlavor,
             this.decorationType,
             this.decorationColor,
-            this.customMessage,
+            // this.customMessage,
             this.shape,
             this.allergies,
             this.specialIngredients,
-            this.packagingType
+            this.packagingType,
 
         ];
         for (const property of requiredProperties) {

@@ -10,8 +10,7 @@ export class ToyBuilder {
     private Material!: string;
     private BatteryRequired!: boolean;
     private Educational!: boolean;
-    private Price!: number;
-    private Quantity!: number;
+ 
 
     public setOrderID(orderID: number): ToyBuilder {
         this.OrderID = orderID;
@@ -48,15 +47,7 @@ export class ToyBuilder {
         return this;
     }
 
-    public setPrice(price: number): ToyBuilder {
-        this.Price = price;
-        return this;
-    }
-
-    public setQuantity(quantity: number): ToyBuilder {
-        this.Quantity = quantity;
-        return this;
-    }
+    
 
     build(): Toy{
         const requiredProperties = [
@@ -67,8 +58,6 @@ export class ToyBuilder {
             this.Material,
             this.BatteryRequired,
             this.Educational,
-            this.Price,
-            this.Quantity
         ];
         for (const property of requiredProperties) {
             if (!property){
@@ -84,8 +73,7 @@ export class ToyBuilder {
             this.Material,
             this.BatteryRequired,
             this.Educational,
-            this.Price,
-            this.Quantity
+          
         );
 
     }
