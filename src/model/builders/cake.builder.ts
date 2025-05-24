@@ -107,7 +107,7 @@ export class CakeBuilder {
             this.shape,
             this.allergies,
             this.specialIngredients,
-            this.packagingType,
+            this.packagingType
 
         ];
         for (const property of requiredProperties) {

@@ -61,7 +61,9 @@ export class Toy {
 
 
 
+
     getCategory(): ItemCategory{
         return ItemCategory.TOY;
+ 
     }
 }

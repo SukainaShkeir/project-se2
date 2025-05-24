@@ -47,4 +47,5 @@ export async function writeCSVFile(filePath: string, data: string[][]): Promise<
     catch (error){
         throw new Error('Error writing CSV file: $(error)');
             }
+            
         }

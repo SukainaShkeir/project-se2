@@ -10,6 +10,10 @@ export class ToyBuilder {
     private Material!: string;
     private BatteryRequired!: boolean;
     private Educational!: boolean;
+
+    public static NewBuilder(): ToyBuilder {
+        return new ToyBuilder();
+    }
  
 
     public setOrderID(orderID: number): ToyBuilder {

@@ -12,6 +12,7 @@ export class BookBuilder {
     private specialEdition!: string;
     private packaging!: string;
    
+    
     public setOrderId(orderId: number): BookBuilder {
         this.orderId = orderId;
         return this;
