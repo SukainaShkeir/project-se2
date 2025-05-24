@@ -11,9 +11,11 @@ export class Book implements IItem {
     private publisher: string;
     private specialEdition: string;
     private packaging: string;
-   
 
     
+   
+
+
     constructor(
         orderId: number,
         bookTitle: string,
